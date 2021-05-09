@@ -6,6 +6,9 @@ videos = pytube.Playlist(lista)
 ctos=len(videos)
 todos={'Link':videos}
 if lista:
+   videos = pytube.Playlist(lista)
+   ctos=len(videos)
+   todos={'Link':videos}
    df = pd.DataFrame(todos)
 
    st.table(df)
