@@ -10,3 +10,13 @@ if lista:
    df = pd.DataFrame(todos)
 
    st.table(df)
+   
+from pytube import Playlist
+play_list = Playlist("https://www.youtube.com/playlist?list=PLlRFEj9H3Oj7Oj3ndXmNS1FFOUyQP-gEa")
+print(len(play_list))
+
+for link in play_list:
+    print(link)
+for video in play_list.videos:
+    name = video.title
+    print(name)
